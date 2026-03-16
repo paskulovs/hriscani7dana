@@ -65,12 +65,12 @@ a {
 	font-size: 17px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: var(--dark-color);
+	color: var(--ternary-color);
 }
 .section-heading .line-dec {
 	width: 60px;
 	height: 3px;
-	background-color: var(--dark-color);
+	background-color: var(--ternary-color);
 	margin: 0 auto;
 }
 
@@ -311,77 +311,39 @@ bootstrap.min.css
 	margin-bottom: 60px;
 }
 
-.service-item {
-	cursor: pointer;
-	background-color: #fff;
-	text-align: center;
-	padding: 30px 20px;
-	transition: all 0.7s;
-	box-shadow: 0px 0px 15px #cdcdcd;
+.about-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	align-items: start;
 }
 
-.service-item:hover {
-	background-color: var(--primary-color);
+.about-entry {
+	position: relative;
+	background: #fff;
+	padding: 34px 32px 30px;
+	border-radius: 6px;
+	border-top: 4px solid rgba(var(--primary-color-rgb), 0.85);
+	box-shadow: 0 14px 34px rgba(18, 18, 18, 0.08);
 }
 
-.service-item h4 {
-	font-size: 16px;
+.about-entry h5 {
+	margin: 0 0 18px;
+	font-size: 28px;
+	line-height: 1.3;
 	font-weight: 700;
-	letter-spacing: 0.5px;
-	margin-bottom: 15px;
-	margin-top: 25px;
+	color: var(--ternary-color);
 }
 
-.service-item:hover h4 {
-	color: #fff;
+.about-entry p {
+	margin-bottom: 16px;
+	font-size: 18px;
+	line-height: 1.9;
+	color: #37444d;
 }
 
-.service-item:hover p {
-	color: #fff;
-}
-
-.first-service .icon {
-	background-image: url(../img/first-service-main.png);
-	height: 32px;
-	width: 32px;
-	display: inline-block;
-}
-
-.first-service:hover .icon {
-	background-image: url(../img/first-service-white.png);
-}
-
-.second-service .icon {
-	background-image: url(../img/second-service-main.png);
-	height: 32px;
-	width: 22px;
-	display: inline-block;
-}
-
-.second-service:hover .icon {
-	background-image: url(../img/second-service-white.png);
-}
-
-.third-service .icon {
-	background-image: url(../img/third-service-main.png);
-	height: 32px;
-	width: 32px;
-	display: inline-block;
-}
-
-.third-service:hover .icon {
-	background-image: url(../img/third-service-white.png);
-}
-
-.fourth-service .icon {
-	background-image: url(../img/fourth-service-main.png);
-	height: 32px;
-	width: 32px;
-	display: inline-block;
-}
-
-.fourth-service:hover .icon {
-	background-image: url(../img/fourth-service-white.png);
+.about-entry p:last-child {
+	margin-bottom: 0;
 }
 
 
@@ -633,7 +595,7 @@ bootstrap.min.css
 	content: "";
 	position: absolute;
 	inset: 0;
-	background-image: url(../img/zajednicka_wide.png);
+	background-image: url(../img/kamp_wide.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1024,8 +986,8 @@ body.lb-disable-scrolling {
 		max-width: none;
 		text-align: center;
 	}
-	.service-item {
-		margin-bottom: 30px;
+	.about-grid {
+		grid-template-columns: 1fr;
 	}
 	#what-we-do .right-image {
 		margin-top: 60px;
@@ -1061,5 +1023,21 @@ body.lb-disable-scrolling {
 	.hero-static__content p {
 		font-size: 14px;
 		line-height: 24px;
+	}
+	#about {
+		padding: 60px 0;
+	}
+	#about .section-heading {
+		margin-bottom: 36px;
+	}
+	.about-entry p {
+		font-size: 16px;
+		line-height: 1.8;
+	}
+	.about-entry {
+		padding: 28px 22px 24px;
+	}
+	.about-entry h5 {
+		font-size: 23px;
 	}
 }
