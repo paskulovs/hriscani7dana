@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hriscani7dana.org/sitemap.xml
